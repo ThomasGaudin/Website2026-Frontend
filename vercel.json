@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/panel",
+      "destination": "https://api.thomasgaudin.xyz/panel",
+      "permanent": false
+    },
+    {
+      "source": "/panel/:path*",
+      "destination": "https://api.thomasgaudin.xyz/panel/:path*",
+      "permanent": false
+    }
+  ]
+}
