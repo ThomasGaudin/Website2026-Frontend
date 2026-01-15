@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <header className="w-full h-25 md:h-35 p-5">
       <nav className="flex justify-between items-start">
-        <h3 className="w-1/2 leading-none">
+        <h3 className="w-1/2 leading-none whitespace-nowrap">
           thomas gaudin <br /> interactive media designer <br />
           switzerland
         </h3>
@@ -44,16 +44,16 @@ export default function Header() {
             projects
           </Link>
           <Link
-            href="/contact"
-            className="text-h3 hover:opacity-70 transition-opacity cursor-pointer"
-          >
-            contact
-          </Link>
-          <Link
             href="/about"
             className="text-h3 hover:opacity-70 transition-opacity cursor-pointer"
           >
             about
+          </Link>
+          <Link
+            href="/contact"
+            className="text-h3 hover:opacity-70 transition-opacity cursor-pointer"
+          >
+            contact
           </Link>
         </div>
 

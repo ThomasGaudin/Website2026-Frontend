@@ -1,5 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/panel",
+        destination: "http://localhost:8000/panel",
+        permanent: false,
+      },
+      {
+        source: "/panel/:path*",
+        destination: "http://localhost:8000/panel/:path*",
+        permanent: false,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

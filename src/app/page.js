@@ -4,7 +4,9 @@ import ProjectPreviewList from "../components/ProjectPreviewList";
 
 async function getProjects() {
   try {
-    const res = await fetch("https://api.thomasgaudin.xyz/projects", {
+    //process.env.NEXT_PUBLIC_API_URL ||
+    const apiUrl = "http://localhost:8000";
+    const res = await fetch(`${apiUrl}/projects`, {
       cache: "no-store", // Pour avoir les données à jour à chaque requête
     });
 
