@@ -32,6 +32,17 @@ async function getAbout() {
 export default async function AboutPage() {
   const about = await getAbout();
 
+  if (!about) {
+    return (
+      <div className="p-5 w-full">
+        <Link href="/" className="mb-6 inline-block text-h3">
+          ← Retour
+        </Link>
+        <p>Erreur lors du chargement de la page</p>
+      </div>
+    );
+  }
+
   return (
     <div className="p-5 w-full">
       <Link href="/" className="mb-6 inline-block text-h3">
@@ -40,7 +51,7 @@ export default async function AboutPage() {
       <div className="flex flex-col gap-10 md:w-3/4 w-full h-full items-stretch">
         <div className="flex-1">
           <h1 className="text-h1 leading-none mb-4">About</h1>
-          <p className="text-h3 w-full mb-4">{about && about.texte}</p>
+          <p className="text-h3 w-full mb-4">{about.texte}</p>
         </div>
         <div className="flex-1">
           <h2 className="text-h1 leading-none mb-4">Features</h2>
