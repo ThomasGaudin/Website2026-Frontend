@@ -4,8 +4,8 @@ import ProjectPreviewList from "../components/ProjectPreviewList";
 
 async function getProjects() {
   try {
-    //process.env.NEXT_PUBLIC_API_URL ||
-    const apiUrl = "http://localhost:8000";
+    // ||
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
     const res = await fetch(`${apiUrl}/projects`, {
       cache: "no-store", // Pour avoir les données à jour à chaque requête
     });

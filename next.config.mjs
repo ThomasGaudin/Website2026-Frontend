@@ -4,12 +4,12 @@ const nextConfig = {
     return [
       {
         source: "/panel",
-        destination: "http://localhost:8000/panel",
+        destination: "https://api.thomasgaudin.xyz/panel",
         permanent: false,
       },
       {
         source: "/panel/:path*",
-        destination: "http://localhost:8000/panel/:path*",
+        destination: "https://api.thomasgaudin.xyz/panel/:path*",
         permanent: false,
       },
     ];
@@ -17,9 +17,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "8000",
+        protocol: "https",
+        hostname: "api.thomasgaudin.xyz",
+        port: "443",
         pathname: "/**",
       },
       // Ajoutez ici votre domaine de production
