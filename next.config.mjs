@@ -19,7 +19,6 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "api.thomasgaudin.xyz",
-        port: "443",
         pathname: "/**",
       },
       // Ajoutez ici votre domaine de production
